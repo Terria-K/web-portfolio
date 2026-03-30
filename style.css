@@ -479,6 +479,20 @@ footer img {
     height: 50px;
 }
 
+.copyright {
+    text-align: start;
+    color: gray;
+    background-color: var(--color-midnight);
+    width: 100%;
+    max-width: 96rem;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.make-it-rounded {
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 960px) {
     .project img {
         height: 10rem;
