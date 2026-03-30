@@ -9,11 +9,11 @@
     </head>
     <body>
         <main>
-            <nav>
+            <nav id="navigation">
                 <div class="nav-container">
                     <a class="logo" href="index.html">
                         <div>
-                            AEL BRIAN
+                            Ael's Work
                         </div>
                     </a>
 
@@ -40,26 +40,279 @@
                         <img src="assets/hero/hero.webp" draggable="false"/>
                     </div>
 
-                    <div class="banner-header">
-                        <div class="banner-header-container">
-                            <div>
-                                <p class="banner-header-title">Hello, I am Ael!</p>
-                                <p>What would you like to know about me?</p>
-                            </div>
+                    <div class="banner-layout">
+                        <div class="banner-header">
+                            <div class="banner-header-container">
+                                <div>
+                                    <p class="banner-header-title">Hello, I am Ael!</p>
+                                    <p>What would you like to know about me?</p>
+                                </div>
 
-                            <div class="banner-header-button-container">
-                                <a class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">About Myself</span></a>
-                                <a class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">Skills</span></a>
-                                <a class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">Projects</span></a>
+                                <div class="banner-header-button-container">
+                                    <a href="#about-myself" class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">About Myself</span></a>
+                                    <a href="#techstack" class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">Tech Stacks</span></a>
+                                    <a href="#projects" class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">Projects</span></a>
+                                    <a href="#certification" class="banner-header-selection"><span class="something-that-clicks">></span> <span class="hoverable-text">Certification</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="banner-tagline">
+                            <div class="tagline-content">
+                                <ol id="taglines" draggable="false">
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </article>
             </section>
 
-            <header>
-                Hi
+            <header class="intro" id="about-myself">
+                <div class="intro-header">
+                    <div>
+                        <h1>About Myself</h1>
+                        <p class="intro-paragraph">
+                            Hello, I am Ael Brian! You can just call me Ael instead. I am a third year college IT.
+                            I am known as a C# programmer for coding and has worked on a huge project as well. I also draw arts digitally, which is my hobby before
+                            I learn how to do coding.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h1 class="make-it-right">Dream Job</h1>
+                        <div class="make-it-right">
+                            <ul class="make-it-align-right">
+                                <li>
+                                    <b>
+                                        Game Developer
+                                    </b>
+                                </li>
+
+                                <li>
+                                    <b>
+                                        Hardware Design Engineer
+                                    </b>
+                                </li>
+
+                                <li>
+                                    <b>
+                                        OS Developer
+                                    </b>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-stacks" id="techstack">
+                    <h1>Tech Stacks</h1>
+
+                    <div>
+                        <h2>Desktop Development</h2>
+                        <div class="stack-list">
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/csharp.svg"/>
+                                </span>
+                                C#
+                            </div>
+                            <div class="skill">
+                                <img src="assets/svg/avalonia.svg"/>
+                                Avalonia
+                            </div>
+                        </div>
+
+                        <h2>Game Development</h2>
+                        <div class="stack-list">
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/csharp.svg"/>
+                                </span>
+                                C#
+                            </div>
+                            <div class="skill">
+                                <span class="icon-cover">
+                                    <img class="icon-small" src="assets/svg/monogame.svg"/>
+                                </span>
+                                MonoGame
+                            </div>
+
+                            <div class="skill">
+                                <span class="icon-cover">
+                                    <img class="icon-small" src="assets/svg/sdl.svg"/>
+                                </span>
+                                SDL
+                            </div>
+                        </div>
+
+                        <h2>Web Development</h2>
+                        <div class="stack-list">
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/typescript.svg"/>
+                                </span>
+                                TypeScript
+                            </div>
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/react.svg"/>
+                                </span>
+                                React
+                            </div>
+
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/tailwind.svg"/>
+                                </span>
+                                Tailwind
+                            </div>
+
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/astro.svg"/>
+                                </span>
+                                Astro
+                            </div>
+                        </div>
+
+                        <h2>Editor Preferences</h2>
+                        <div class="stack-list">
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/vscode.svg"/>
+                                </span>
+                                Visual Studio Code
+                            </div>
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/neovim.svg"/>
+                                </span>
+                                Neovim
+                            </div>
+                        </div>
+
+                        <h2>Linux Distro</h2>
+                        <div class="stack-list">
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/arch.svg"/>
+                                </span>
+                                Arch Linux
+                            </div>
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/debian.svg"/>
+                                </span>
+                                Debian
+                            </div>
+                            <div class="skill">
+                                <span>
+                                    <img src="assets/svg/rhel.svg"/>
+                                </span>
+                                Red Hat Linux
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-projects" id="projects">
+                    <h1>Projects</h1>
+                </div>
+
+                <div class="intro-certification" id="certification">
+                    <h1>Certifications</h1>
+
+                    <div class="certification">
+                        <img src="assets/svg/certification/cisco.svg"/>
+                        <div>
+                            <b>CPA: Programming Essentials in C++</b>
+                            <p>C++ Institute - CISCO Networking Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="certification">
+                        <img src="assets/svg/certification/cisco.svg"/>
+                        <div>
+                            <b>CPA: Advanced Programming in C++</b>
+                            <p>C++ Institute - CISCO Networking Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="certification">
+                        <img src="assets/svg/certification/cisco.svg"/>
+                        <div>
+                            <b>CCNAv7: Introduction to Networks</b>
+                            <p>C++ Institute - CISCO Networking Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="certification">
+                        <img src="assets/svg/certification/comptia.svg"/>
+                        <div>
+                            <b>CompTIA IT Fundamentals (ITF+) Certification</b>
+                            <p>AMA Computer University</p>
+                        </div>
+                    </div>
+
+                </div>
             </header>
+
+            <footer>
+                <h1>My Contacts:</h1>
+                <section>
+                    <article>
+                        <img src="assets/svg/contacts/matrix.svg"/>
+                        <a href="https://matrix.to/#/@terriamon:matrix.org">@terriamon:matrix.org</a>
+                    </article>
+
+                    <article>
+                        <img src="assets/svg/contacts/discord.svg"/>
+                        Discord: <a href="https://discord.gg/5sg7jVdhVW">Teuria's Cosmic Space</a>
+                    </article>
+
+                    <article>
+                        <img src="assets/svg/contacts/x.svg"/>
+                        <a href="https://x.com/Teuriamon">@Teuriamon</a>
+                    </article>
+                </section>
+
+                <h2>
+                    <a href="">View Source Code</a>
+                </h2>
+            </footer>
         </main>
+
+        <script>
+        const taglines = [
+            "Make the code work, then make the code fast.",
+            "\"Giving up\" is not in my dictionary.",
+            "True art does not require a mask.",
+            "It's not a bug, its a feature!",
+        ]
+
+        function createTagline(tagline) {
+            return `<li>
+                       <span>${tagline}</span>
+                    </li>`
+        }
+
+        const tagline = document.getElementById("taglines");
+        let str = ""
+        for (const tag of taglines) {
+            str += createTagline(tag)
+        }
+        tagline.innerHTML = str
+
+
+        document.addEventListener('scroll', () => {
+            const navigation = document.getElementById("navigation");
+            if (window.scrollY > 0) {
+                navigation.setAttribute("data-scrolled", "");
+                return;
+            }
+
+            navigation.removeAttribute("data-scrolled");
+        });
+        </script>
     </body>
 </html>

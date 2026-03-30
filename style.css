@@ -10,6 +10,7 @@
 }
 
 * {
+    font-family: LexendDeca;
     box-sizing: border-box;
 
     --color-midnight: rgb(31, 34, 43);
@@ -40,6 +41,11 @@ nav {
     z-index: 20;
     font-size: 16px;
     font-family: LexendDeca;
+    transition: 300ms;
+}
+
+#navigation[data-scrolled] {
+    background-color: black;
 }
 
 .nav-container {
@@ -107,15 +113,75 @@ nav {
     position: relative;
 }
 
-.banner-header {
+.banner-layout {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: start;
     max-width: 96rem;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.banner-header {
     font-family: LexendDeca;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-tagline {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    color: gray;
+    transform: translateY(-20px)
+}
+
+.tagline-content ol {
+    --height: 1.5rem;
+    height: var(--height);
+    line-height: var(--height);
+    list-style: none;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.tagline-content ol li {
+    animation: slide-up-text 24s infinite;
+    display: flex;
+    justify-content: center;
+}
+
+.tagline-content ol li span {
+    font-weight: bold;
+    user-select: none;
+}
+
+@keyframes slide-up-text {
+    0%, 20% {
+        transform: translateY(0%);
+    }
+    25%, 45% {
+        transform: translateY(-100%);
+    }
+    50%, 70% {
+        transform: translateY(-200%);
+    }
+    75%, 90% {
+        transform: translateY(-300%);
+    }
+    100%, 120% {
+        transform: translateY(-400%);
+    }
+    125%, 145% {
+        transform: translateY(0%);
+    }
 }
 
 .banner-header-container {
@@ -138,6 +204,11 @@ nav {
     flex-direction: column;
 }
 
+.banner-header-button-container a {
+    text-decoration: none;
+    color: white;
+}
+
 .banner-header-title {
     font-weight: bold !important;
     font-size: 36px !important;
@@ -154,7 +225,7 @@ nav {
 
 .banner-header-selection:hover {
     --hover-margin: 8px;
-    --hover-color: #5bbde4;
+    --hover-color: #73d7ff;
 }
 
 .hoverable-text {
@@ -165,12 +236,6 @@ nav {
 
 .something-that-clicks {
     font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-    .banner-header {
-        justify-content: start;
-    }
 }
 
 .image-container {
@@ -187,4 +252,220 @@ nav {
     height: 100%;
     object-fit: cover;
     user-select: none;
+}
+
+.intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 4px;
+    margin-top: 20px;
+    font-family: LexendDeca;
+    display: grid;
+    gap: 8rem;
+}
+
+.intro-header {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    font-size: 18px;
+}
+
+.intro-header a {
+    text-decoration: none;
+    color: #73d7ff;
+}
+
+.make-it-right {
+    display: flex;
+    justify-content: end;
+}
+
+.make-it-align-right {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.make-it-align-right li {
+    margin-bottom: 0.3rem;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+.make-it-align-right li:last-child {
+    margin-bottom: 0;
+}
+
+.intro-stacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-stacks div {
+    text-align: center;
+}
+
+.stack-list {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--color-midnight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skill img {
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.icon-small {
+    width: 4.3rem !important;
+    height: 4.3rem !important;
+}
+
+.icon-cover {
+    background-color: #242938;
+    border-radius: 1.5rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-projects div {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.intro-certification {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    gap: 0.3rem;
+}
+
+.intro-certification div {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.certification {
+    display: flex;
+    gap: 0.4rem;
+    font-size: 18px;
+    border-radius: 1.2rem;
+    background-color: var(--color-midnight);
+}
+
+.certification div {
+    padding: 20px;
+    text-align: start;
+}
+
+.certification img {
+    margin-top: 24px;
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-midnight);
+    font-size: 20px;
+    flex-direction: column;
+}
+
+footer section {
+    display: grid;
+    padding: 0;
+    gap: 20px;
+}
+
+footer article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 24px;
+}
+
+footer a {
+    color:#5bbde4;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .banner-layout {
+        align-items: center;
+    }
+
+    .intro-header {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .intro-stacks div {
+        text-align: center;
+    }
+
+    .intro-paragraph {
+        text-align: center;
+        padding: 0 1.5rem 0 1.5rem;
+    }
+
+    .make-it-right {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .make-it-align-right {
+        padding: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .skill img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .icon-small {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
 }
