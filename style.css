@@ -1,0 +1,190 @@
+@font-face {
+    font-family: LexendDeca;
+    src: url("assets/font/LexendDeca-Regular.ttf");
+}
+
+@font-face {
+    font-family: LexendDeca;
+    src: url("assets/font/LexendDeca-Bold.ttf");
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+
+    --color-midnight: rgb(31, 34, 43);
+    --color-midnight-light: rgb(51, 50, 75);
+    --color-midnight-lighter: rgb(74, 82, 110);
+    --color-midnight-blue: rgb(32, 29, 54);
+    --color-midnight-transparent: rgba(31, 34, 43, 0.533);
+    --color-midnight-light-transparent: rgba(51, 50, 75, 0.533);
+}
+
+html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(176deg, #12181b 50%, #202737 100%);
+    background-attachment: fixed;
+}
+
+nav {
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    position: fixed;
+    padding: 0 1.2rem 0 1.2rem;
+    z-index: 20;
+    font-size: 16px;
+    font-family: LexendDeca;
+}
+
+.nav-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button-list {
+    display: flex;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    transition: 300ms;
+    --scale-y: 0;
+    color: white;
+}
+
+.nav-button::after {
+    transition: 300ms;
+    content: "";
+    position: absolute;
+    inset: 0 -1px;
+    z-index: -1;
+    transform: skew(-10deg) scaleY(var(--scale-y));
+    background-color: #5bbde4;
+    opacity: var(--scale-y);
+}
+
+.nav-button:hover::after {
+    background-color: #93edf3;
+}
+
+.nav-button:hover {
+    color: black;
+    --scale-y: 1;
+}
+
+.nav-button div {
+    padding: 0.8rem;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner article {
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.banner-header {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: LexendDeca;
+}
+
+.banner-header-container {
+    padding: 0 2rem 0 2rem;
+}
+
+.banner-header-container div p {
+    margin: 8px;
+    font-weight: 100;
+    font-size: 22px;
+}
+
+.banner-header-container div a {
+    margin: 0 8px 0 8px;
+    font-size: 20px;
+}
+
+.banner-header-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-header-title {
+    font-weight: bold !important;
+    font-size: 36px !important;
+}
+
+.banner-header-selection {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.3rem;
+    user-select: none;
+}
+
+.banner-header-selection:hover {
+    --hover-margin: 8px;
+    --hover-color: #5bbde4;
+}
+
+.hoverable-text {
+    margin-left: var(--hover-margin);
+    color: var(--hover-color);
+    transition: 300ms;
+}
+
+.something-that-clicks {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .banner-header {
+        justify-content: start;
+    }
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    inset: 0;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
