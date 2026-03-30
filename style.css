@@ -311,7 +311,7 @@ nav {
 }
 
 .stack-list {
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     background-color: var(--color-midnight);
     display: flex;
@@ -352,12 +352,11 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
 .intro-projects div {
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 .intro-certification {
@@ -371,9 +370,64 @@ nav {
 }
 
 .intro-certification div {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+.project-container {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--color-midnight);
+    display: flex;
+    gap: 10px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-content p {
+    text-align: start;
+}
+
+
+.project img {
+    object-fit: cover;
+    height: 20rem;
+    border-radius: 20px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.project-buttons a {
+    padding: 20px;
+    background-color: #12181b;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.red {
+    background-color: rgb(255, 57, 57) !important;
+}
+
+.red:hover {
+    background-color: rgb(255, 96, 96) !important;
+}
+
+.blue {
+    background-color: rgb(80, 80, 255) !important;
+}
+
+.blue:hover {
+    background-color: rgb(114, 114, 255) !important;
+}
+
 
 .certification {
     display: flex;
@@ -425,8 +479,31 @@ footer img {
     height: 50px;
 }
 
+@media screen and (max-width: 960px) {
+    .project img {
+        height: 10rem;
+    }   
+
+    .project-buttons {
+        justify-content: center;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .banner-header-selection {
+        padding: 0.8rem;
+        font-weight: bold;
+        font-size: 30px !important;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
+    .project img {
+        height: 8rem;
+    }   
     .banner-layout {
         align-items: center;
     }
@@ -467,5 +544,19 @@ footer img {
     .icon-small {
         width: 2.5rem !important;
         height: 2.5rem !important;
+    }
+
+    .stack-list {
+        gap: 10px;
+    }
+
+    footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .intro {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
